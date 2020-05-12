@@ -1,52 +1,24 @@
-package com.userms.entity;
+package com.userms.models;
 
-import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="seller")
-public class SellerEntity {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
-    private String username;
+public class SellerModel {
+	private String username;
 
     private String password;
-
+    
     private String companyName;
 
-    private String gstin;
+	private String gstin;
 
-    @Column(name="brief_about_company")
-    private String briefAboutCompany;
+	private String briefAboutCompany;
 
-    @Column(name="postal_address")
-    private String postalAddress;
+	private String postalAddress;
 
-    private String website;
+	private String website;
 
     private String email;
-
-    @Column(name="contact_number")
-    private String contactNumber;
-
-    @Column(name="create_Time")
-    private Date createTime;
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    
+	private String contactNumber;
 
 	public String getUsername() {
 		return username;
@@ -64,6 +36,13 @@ public class SellerEntity {
 		this.password = password;
 	}
 
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	public String getCompanyName() {
 		return companyName;
 	}
@@ -104,14 +83,6 @@ public class SellerEntity {
 		this.website = website;
 	}
 
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
 	public String getContactNumber() {
 		return contactNumber;
 	}
@@ -119,15 +90,6 @@ public class SellerEntity {
 	public void setContactNumber(String contactNumber) {
 		this.contactNumber = contactNumber;
 	}
-
-	public Date getCreateTime() {
-		return createTime;
-	}
-
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
-
-
+	
     
 }

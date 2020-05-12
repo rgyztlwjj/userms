@@ -25,8 +25,8 @@ public class BuyerEntity {
     @Column(name="mobile_phone")
     private String mobilePhone;
 
-    @Column(name="create_datetime")
-    private Date createDatetime;
+    @Column(name="create_Time")
+    private Date createtime;
 
 	public Integer getId() {
 		return id;
@@ -68,12 +68,12 @@ public class BuyerEntity {
 		this.mobilePhone = mobilePhone;
 	}
 
-	public Date getCreateDatetime() {
-		return createDatetime;
+	public Date getCreateTime() {
+		return createtime;
 	}
 
-	public void setCreateDatetime(Date createDatetime) {
-		this.createDatetime = createDatetime;
+	public void setCreateTime(Date createtime) {
+		this.createtime = createtime;
 	}
 	
 	
