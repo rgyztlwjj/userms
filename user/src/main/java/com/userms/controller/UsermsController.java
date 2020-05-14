@@ -24,7 +24,7 @@ public class UsermsController {
 	@Autowired
 	private JwtUtil jwt;
     
-	@PostMapping
+	@PostMapping("/login")
     public ResponseEntity<UserModel> login(@RequestBody UserModel user) {
 		
 		int userId = userService.getUserId(user);
